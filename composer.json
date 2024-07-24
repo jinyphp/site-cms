@@ -1,0 +1,37 @@
+{
+    "name": "jiny/site-cms",
+    "description": "jinySite for Laravel",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hojinlee",
+            "email": "infohojin@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "^8.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jiny\\Site\\CMS\\":"src/"
+        },
+        "files" : [
+            "src/Helpers/Helper.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Jiny\\Site\\CMS\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Jiny\\Site\\CMS\\JinySiteCMSServiceProvider"
+            ]
+        }
+    }
+
+}
