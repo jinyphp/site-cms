@@ -52,6 +52,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shop_sliders');
+        Schema::dropIfExists('cms_sliders');
     }
 };

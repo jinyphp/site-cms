@@ -28,6 +28,11 @@ class JinySiteCMSServiceProvider extends ServiceProvider
 
             Livewire::component('SiteSliders', \Jiny\Site\CMS\Http\Livewire\SiteSlider::class);
 
+
+
+            Livewire::component('SiteSubscription',
+                \Jiny\Site\CMS\Http\Livewire\SiteSubscription::class);
+
         });
     }
 }
