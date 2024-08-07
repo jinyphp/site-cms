@@ -16,26 +16,24 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('site_subscribe', function (Blueprint $table) {
+        Schema::create('site_help', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             ## 활성화
             $table->string('enable')->nullable();
 
-            $table->string('type')->nullable();
+            ## 카테고리
+            $table->string('cate')->nullable();
 
-            $table->string('item1')->nullable();
-            $table->string('item2')->nullable();
-            $table->string('item3')->nullable();
-            $table->string('item4')->nullable();
-            $table->string('item5')->nullable();
+            $table->string('title')->nullable();
+            $table->text('content')->nullable();
+            $table->string('image')->nullable();
 
-            $table->string('email')->nullable();
+            $table->string('manager')->nullable();
 
-            $table->string('del')->nullable();
-
-
+            ## 출력 순서
+            $table->integer('pos')->default(1);
         });
     }
 
@@ -46,6 +44,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_subscribe');
+        Schema::dropIfExists('site_help');
     }
 };

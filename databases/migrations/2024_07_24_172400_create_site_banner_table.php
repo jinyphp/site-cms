@@ -16,7 +16,7 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('site_subscribe', function (Blueprint $table) {
+        Schema::create('site_banner', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
@@ -25,17 +25,15 @@ return new class extends Migration
 
             $table->string('type')->nullable();
 
-            $table->string('item1')->nullable();
-            $table->string('item2')->nullable();
-            $table->string('item3')->nullable();
-            $table->string('item4')->nullable();
-            $table->string('item5')->nullable();
-
-            $table->string('email')->nullable();
-
-            $table->string('del')->nullable();
+            $table->string('title')->nullable();
+            $table->text('content')->nullable();
+            $table->string('image')->nullable();
 
 
+            $table->string('started_at')->nullable();
+            $table->string('finished_at')->nullable();
+
+            $table->string('manager')->nullable();
         });
     }
 
@@ -46,6 +44,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_subscribe');
+        Schema::dropIfExists('site_banner');
     }
 };

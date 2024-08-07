@@ -26,12 +26,17 @@ class JinySiteCMSServiceProvider extends ServiceProvider
         /* 라이브와이어 컴포넌트 등록 */
         $this->app->afterResolving(BladeCompiler::class, function () {
 
-            Livewire::component('SiteSliders', \Jiny\Site\CMS\Http\Livewire\SiteSlider::class);
-
-
+            Livewire::component('SiteSliders',
+                \Jiny\Site\CMS\Http\Livewire\SiteSlider::class);
 
             Livewire::component('SiteSubscription',
                 \Jiny\Site\CMS\Http\Livewire\SiteSubscription::class);
+
+            Livewire::component('SiteContact',
+                \Jiny\Site\CMS\Http\Livewire\SiteContact::class);
+
+            Livewire::component('site-notification-user',
+                \Jiny\Site\CMS\Http\Livewire\SiteNotificationUser::class);
 
         });
     }

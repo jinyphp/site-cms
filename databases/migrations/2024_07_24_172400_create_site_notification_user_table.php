@@ -16,26 +16,23 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('site_subscribe', function (Blueprint $table) {
+        Schema::create('site_notification_user', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
             ## 활성화
             $table->string('enable')->nullable();
 
-            $table->string('type')->nullable();
+            ## 사용자 id
+            $table->string('user_id')->nullable();
 
-            $table->string('item1')->nullable();
-            $table->string('item2')->nullable();
-            $table->string('item3')->nullable();
-            $table->string('item4')->nullable();
-            $table->string('item5')->nullable();
+            ## notification id
+            $table->string('noti_id')->nullable();
 
-            $table->string('email')->nullable();
+            ## 상태
+            $table->string('status')->nullable();
 
-            $table->string('del')->nullable();
-
-
+            $table->string('manager')->nullable();
         });
     }
 
@@ -46,6 +43,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('site_subscribe');
+        Schema::dropIfExists('site_notification_user');
     }
 };
