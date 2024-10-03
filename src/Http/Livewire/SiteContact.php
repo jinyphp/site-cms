@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\DB;
 class SiteContact extends Component
 {
     public $tablename = "site_contact";
+
     public $viewFile;
     public $viewSuccessFile;
     public $forms = [];

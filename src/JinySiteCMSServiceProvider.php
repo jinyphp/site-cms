@@ -32,11 +32,14 @@ class JinySiteCMSServiceProvider extends ServiceProvider
             Livewire::component('site-subscription',
                 \Jiny\Site\CMS\Http\Livewire\SiteSubscription::class);
 
-            Livewire::component('SiteContact',
+            Livewire::component('site-contact',
                 \Jiny\Site\CMS\Http\Livewire\SiteContact::class);
 
             Livewire::component('site-notification-user',
                 \Jiny\Site\CMS\Http\Livewire\SiteNotificationUser::class);
+
+            Livewire::component('site-help',
+                \Jiny\Site\CMS\Http\Livewire\SiteHelp::class);
 
         });
     }

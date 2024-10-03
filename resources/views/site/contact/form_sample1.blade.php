@@ -34,7 +34,7 @@
                     placeholder="+1 ___ ___ __">
             </div>
 
-            <div class="col-12 position-relative">
+            {{-- <div class="col-12 position-relative">
                 <label class="form-label">Subject *</label>
                 <select class="form-select form-select-lg rounded-pill" wire:model="forms.subject"
                     data-select='{
@@ -53,7 +53,11 @@
                     <option value="Security concerns">Security concerns</option>
                 </select>
                 <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Select the subject of your message!</div>
+            </div> --}}
+            <div class="col-12 position-relative">
+                <label class="form-label">Subject *</label>
             </div>
+
 
             <div class="col-12 position-relative">
                 <label for="message" class="form-label">Message *</label>

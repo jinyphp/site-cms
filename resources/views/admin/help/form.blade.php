@@ -17,10 +17,29 @@
         </x-form-hor>
 
         <x-form-hor>
-            <x-form-label>카테고리</x-form-label>
+            <x-form-label>
+                <a href="/admin/site/help/cate">
+                    카테고리+
+                </a>
+            </x-form-label>
+            <x-form-item>
+                {{-- {!! xInputText()
+                    ->setWire('model.defer',"forms.cate")
+                    ->setWidth("standard")
+                !!} --}}
+                {!! xSelect()
+                    ->table('site_help_cate','code')
+                    ->setWire('model.defer',"forms.cate")
+                    ->setWidth("medium")
+                !!}
+            </x-form-item>
+        </x-form-hor>
+
+        <x-form-hor>
+            <x-form-label>Slug</x-form-label>
             <x-form-item>
                 {!! xInputText()
-                    ->setWire('model.defer',"forms.cate")
+                    ->setWire('model.defer',"forms.slug")
                     ->setWidth("standard")
                 !!}
             </x-form-item>
@@ -41,6 +60,16 @@
             <x-form-item>
                 {!! xTextarea()
                     ->setWire('model.defer',"forms.content")
+                !!}
+            </x-form-item>
+        </x-form-hor>
+
+        <x-form-hor>
+            <x-form-label>좋아요</x-form-label>
+            <x-form-item>
+                {!! xInputText()
+                    ->setWire('model.defer',"forms.like")
+                    ->setWidth("standard")
                 !!}
             </x-form-item>
         </x-form-hor>

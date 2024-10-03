@@ -13,7 +13,9 @@
             <x-wire-tbody-item :selected="$selected" :item="$item">
 
                 <td width='200'>
-                    {{$item->cate}}
+                    <a href="/admin/site/help/{{$item->code}}">
+                        {{$item->code}}
+                    </a>
                 </td>
 
                 <td>

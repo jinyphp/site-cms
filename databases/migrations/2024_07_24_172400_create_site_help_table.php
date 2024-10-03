@@ -25,10 +25,13 @@ return new class extends Migration
 
             ## 카테고리
             $table->string('cate')->nullable();
+            $table->string('slug')->nullable();
 
             $table->string('title')->nullable();
             $table->text('content')->nullable();
             $table->string('image')->nullable();
+
+            $table->integer('like')->default(1);
 
             $table->string('manager')->nullable();
 

@@ -20,7 +20,7 @@
             <x-form-label>카테고리</x-form-label>
             <x-form-item>
                 {!! xInputText()
-                    ->setWire('model.defer',"forms.cate")
+                    ->setWire('model.defer',"forms.code")
                     ->setWidth("standard")
                 !!}
             </x-form-item>
@@ -31,6 +31,16 @@
             <x-form-item>
                 {!! xInputText()
                     ->setWire('model.defer',"forms.title")
+                    ->setWidth("standard")
+                !!}
+            </x-form-item>
+        </x-form-hor>
+
+        <x-form-hor>
+            <x-form-label>아이콘</x-form-label>
+            <x-form-item>
+                {!! xInputText()
+                    ->setWire('model.defer',"forms.icon")
                     ->setWidth("standard")
                 !!}
             </x-form-item>
