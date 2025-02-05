@@ -17,11 +17,16 @@
         </x-form-hor>
 
         <x-form-hor>
-            <x-form-label>타입</x-form-label>
+            <x-form-label>
+                <a class="btn btn-sm btn-primary" href="/admin/site/banner/cate">
+                    타입
+                </a>
+            </x-form-label>
             <x-form-item>
-                {!! xInputText()
+                {!! xSelect()
+                    ->table('site_banner_cate','type')
                     ->setWire('model.defer',"forms.type")
-                    ->setWidth("standard")
+                    ->setWidth("medium")
                 !!}
             </x-form-item>
         </x-form-hor>
@@ -48,20 +53,21 @@
         <x-form-hor>
             <x-form-label>시작일</x-form-label>
             <x-form-item>
-                {!! xInputText()
-                    ->setWire('model.defer',"forms.started_at")
-                    ->setWidth("standard")
-                !!}
+                <input type="date"
+                    wire:model.defer="forms.started_at"
+                    class="form-control"
+                    style="width: 200px;">
             </x-form-item>
         </x-form-hor>
 
         <x-form-hor>
             <x-form-label>종료일</x-form-label>
             <x-form-item>
-                {!! xInputText()
-                    ->setWire('model.defer',"forms.finished_at")
-                    ->setWidth("standard")
-                !!}
+                <input type="date"
+                    wire:model.defer="forms.inished_at"
+                    class="form-control"
+                    style="width: 200px;">
+
             </x-form-item>
         </x-form-hor>
 

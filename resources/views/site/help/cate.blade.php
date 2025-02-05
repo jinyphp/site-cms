@@ -8,7 +8,7 @@
             active
             @endif
             "
-            href="/help/{{$cate['code']}}">
+            href="/support/help/{{$cate['code']}}">
             {!!$cate['icon']!!}
             {{$cate['title']}}
         </a>

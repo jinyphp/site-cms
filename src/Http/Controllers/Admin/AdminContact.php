@@ -17,7 +17,7 @@ class AdminContact extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_contact";
+        $this->actions['table']['name'] = "site_contact";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.contact.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.contact.form";

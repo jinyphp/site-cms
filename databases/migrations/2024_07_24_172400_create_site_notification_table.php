@@ -29,9 +29,6 @@ return new class extends Migration
             $table->text('content')->nullable();
             $table->string('image')->nullable();
 
-
-
-
             $table->string('manager')->nullable();
         });
     }

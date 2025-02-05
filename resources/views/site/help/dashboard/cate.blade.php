@@ -1,11 +1,4 @@
 <div>
-    <!-- Hero -->
-    @includeIf('jiny-site-cms::site.help.hero', ['cates' => $cates])
-
-
-    {{-- <h2>Design : {{$design}}</h2> --}}
-
-
     <!-- Category cards -->
     <section class="container pt-4">
         <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 g-sm-3 g-md-4">
@@ -20,7 +13,7 @@
                             {{-- <i class="ci-delivery fs-xl pe-1 mt-1 me-2"></i> --}}
                             {!! $cate['icon'] !!}
 
-                            <a href="/help/{{$cate['code']}}">
+                            <a href="/support/help/{{$cate['code']}}">
                                 {{$cate['title']}}
                             </a>
 
@@ -43,7 +36,7 @@
                             ]) as $item)
                             <li>
                                 <a class="nav-link hover-effect-underline fw-normal p-0"
-                                    href="/help/{{$cate['code']}}/{{$item->id}}">
+                                    href="/support/help/{{$cate['code']}}/{{$item->id}}">
                                     {{$item->title}}
                                 </a>
                             </li>
@@ -53,7 +46,7 @@
 
                     <div class="card-footer nav bg-transparent border-0 pt-0">
                         <a class="nav-link animate-underline px-0 py-2"
-                            href="/help/{{$cate['code']}}">
+                            href="/support/help/{{$cate['code']}}">
                             <span class="animate-target">더보기</span>
                             <i class="ci-chevron-right fs-base ms-1"></i>
                         </a>
@@ -88,6 +81,5 @@
             @includeIf("jiny-site-cms::site.help.dashboard.popup_forms")
         @endif
     @endif
-
 
 </div>

@@ -17,7 +17,7 @@ class AdminSubscribe extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_subscribe";
+        $this->actions['table']['name'] = "site_subscribe";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.subscribe.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.subscribe.form";

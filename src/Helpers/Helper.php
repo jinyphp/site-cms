@@ -2,6 +2,16 @@
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
+
+
+if(!function_exists("getHelpCategories")) {
+    function getHelpCategories()
+    {
+        return DB::table('site_help_cate')->get();
+    }
+}
+
+
 /**
  * 베너 목록을 반환합니다.
  */

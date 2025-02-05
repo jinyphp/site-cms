@@ -16,12 +16,20 @@
             </x-form-item>
         </x-form-hor>
 
+
+
         <x-form-hor>
-            <x-form-label>코드</x-form-label>
+            <x-form-label>
+                <a class="btn btn-sm btn-primary"
+                    href="/admin/site/event/cate">
+                    코드
+                </a>
+            </x-form-label>
             <x-form-item>
-                {!! xInputText()
+                {!! xSelect()
+                    ->table('site_event_cate','code')
                     ->setWire('model.defer',"forms.code")
-                    ->setWidth("standard")
+                    ->setWidth("medium")
                 !!}
             </x-form-item>
         </x-form-hor>

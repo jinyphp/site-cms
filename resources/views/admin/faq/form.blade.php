@@ -16,12 +16,30 @@
             </x-form-item>
         </x-form-hor>
 
-        <x-form-hor>
+        {{-- <x-form-hor>
             <x-form-label>카테고리</x-form-label>
             <x-form-item>
                 {!! xInputText()
                     ->setWire('model.defer',"forms.cate")
                     ->setWidth("standard")
+                !!}
+            </x-form-item>
+        </x-form-hor> --}}
+        <x-form-hor>
+            <x-form-label>
+                <a href="/admin/site/faq/cate">
+                    카테고리+
+                </a>
+            </x-form-label>
+            <x-form-item>
+                {{-- {!! xInputText()
+                    ->setWire('model.defer',"forms.cate")
+                    ->setWidth("standard")
+                !!} --}}
+                {!! xSelect()
+                    ->table('site_faq_cate','code')
+                    ->setWire('model.defer',"forms.cate")
+                    ->setWidth("medium")
                 !!}
             </x-form-item>
         </x-form-hor>

@@ -32,7 +32,7 @@
             <input type="file" class="form-control"
                         wire:model.defer="forms.image">
             @if(isset($forms['image']))
-            <div class="p-2">파일명: /{{$forms['image']}}</div>
+            <div class="p-2">파일명: {{$forms['image']}}</div>
             <img src="/{{$forms['image']}}" width="300px" alt="">
             @endif
         </div>

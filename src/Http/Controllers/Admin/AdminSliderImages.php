@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 use Jiny\WireTable\Http\Controllers\WireGridPopupForms;
-class AdminSliderImagesController extends WireGridPopupForms
+class AdminSliderImages extends WireGridPopupForms
 {
     public function __construct()
     {
@@ -17,14 +17,36 @@ class AdminSliderImagesController extends WireGridPopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "cms_slider_images";
+        $this->actions['table']['name'] = "site_slider_images";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.sliders_images.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.sliders_images.form";
 
-        $this->actions['title'] = "슬라이더 이미지";
-        $this->actions['subtitle'] = "사이트에 표시되는 슬라이더들을 관리합니다.";
+
     }
+
+    public function index(Request $request)
+    {
+        if(isset($request->code) && $request->code) {
+            $this->params['code'] = $request->code;
+            $this->actions['params']['code'] = $request->code;
+        } else {
+            // 도움말 코드가 없습니다.
+        }
+
+        $this->actions['title'] = "슬라이더 이미지";
+        if(isset($request->code)) {
+            $this->actions['title'] .= "(".$request->code.")";
+        }
+        $this->actions['subtitle'] = "사이트에 표시되는 슬라이더들을 관리합니다.";
+
+        if($res = parent::index($request)) {
+            return $res;
+        }
+
+        return "페이지 view가 없습니다.";
+    }
+
 
     ## 목록 dbFetch 전에 실행됩니다.
     public function hookIndexing($wire)

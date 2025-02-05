@@ -3,7 +3,7 @@
     <x-wire-thead>
         <th width='200'>타입</th>
         <th>타이틀</th>
-
+        <th width='100'>회원</th>
         <th width='200'>등록일자</th>
     </x-wire-thead>
     <tbody>
@@ -22,7 +22,7 @@
                     </x-click>
                     <div>{{$item->content}}</div>
                 </td>
-
+                <td width='100'>{{$item->user_count}}</td>
                 <td width='200'>{{$item->created_at}}</td>
             </x-wire-tbody-item>
             @endforeach

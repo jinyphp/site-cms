@@ -17,7 +17,7 @@ class AdminFaq extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_faq";
+        $this->actions['table']['name'] = "site_faq";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.faq.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.faq.form";

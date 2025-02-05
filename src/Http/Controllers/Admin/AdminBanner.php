@@ -17,7 +17,7 @@ class AdminBanner extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_banner";
+        $this->actions['table']['name'] = "site_banner";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.banner.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.banner.form";

@@ -17,7 +17,7 @@ class AdminSiteEvent extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_event";
+        $this->actions['table']['name'] = "site_event";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.event.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.event.form";

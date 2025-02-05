@@ -34,8 +34,6 @@
 
                         </div>
 
-
-
                         <button type="submit"
                             class="btn btn-lg btn-primary px-3"
                             wire:click="search()">
@@ -45,12 +43,14 @@
                             </span>
                         </button>
                     </div>
+
                     <div class="nav gap-2 pt-3 pt-sm-4 mt-1 mt-sm-0">
                         <span class="nav-link text-body-secondary pe-none p-0 me-1">Common topics:</span>
+
                         @foreach($cates as $cate)
                         <a class="nav-link text-body-emphasis
                             text-decoration-underline p-0 me-1"
-                            href="/help/{{$code}}">
+                            href="/support/help/{{$cate['code']}}">
                             {{$cate['title']}}
                         </a>
                         @endforeach

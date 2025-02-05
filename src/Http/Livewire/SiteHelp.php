@@ -5,6 +5,10 @@ use Illuminate\Support\Facades\Blade;
 use Livewire\Component;
 use Illuminate\Support\Facades\DB;
 
+use Livewire\Attributes\On;
+
+
+
 /**
  * DB에서 데이터를 읽어 rows를 처리합니다.
  */
@@ -42,6 +46,7 @@ class SiteHelp extends Component
         }
 
         $this->categoryLoad();
+        //dd($this->cates);
 
     }
 
@@ -74,12 +79,13 @@ class SiteHelp extends Component
 
     public function render()
     {
+        //dd($this->cates);
         switch($this->mode) {
             case 'search':
                 $rows = DB::table('site_help')
                     ->where('title','like', "%".$this->search_keyword."%")
                     ->get();
-                return view("jiny-site-cms::site.help.search",[
+                return view("jiny-site-cms::site.help.search.layout",[
                     'rows' => $rows
                   ]);
                 break;
@@ -138,6 +144,20 @@ class SiteHelp extends Component
     {
         $this->mode = "search";
         //dd($this->search_keyword);
+    }
+
+    protected $listeners = ['search_result' => 'handleSearchResult'];
+
+    public function handleSearchResult($keyword)
+    {
+        $this->mode = "search";
+        $this->search_keyword = $keyword;
+
+        // // 검색 결과를 가져오는 로직
+        // $this->rows = DB::table('site_help')
+        //     ->where('title', 'like', '%' . $keyword . '%')
+        //     ->orWhere('content', 'like', '%' . $keyword . '%')
+        //     ->get();
     }
 
     public function cancel()

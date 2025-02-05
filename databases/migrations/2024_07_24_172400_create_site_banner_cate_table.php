@@ -5,7 +5,7 @@ use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
 /**
- * 슬라이더 관리
+ *
  */
 return new class extends Migration
 {
@@ -16,32 +16,20 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cms_sliders', function (Blueprint $table) {
+        Schema::create('site_banner_cate', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
 
-            ## 슬라이더 활성화
+            ## 활성화
             $table->string('enable')->nullable();
 
-            ## 슬라이더 코드
-            ## 여러개의 슬라이더 그룹으로 분리하여 관리
-            $table->string('code')->nullable();
-
-            ## 적용 블레이드
-            $table->string('blade')->nullable();
-
+            $table->string('type')->nullable();
 
             $table->string('title')->nullable();
-
-            ## 메모
             $table->text('description')->nullable();
+            $table->string('image')->nullable();
 
-            ## 카테고리 관리자 아이디
             $table->string('manager')->nullable();
-
-            ## 상태
-            $table->string('status')->nullable();
-
         });
     }
 
@@ -52,6 +40,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cms_sliders');
+        Schema::dropIfExists('site_banner_cate');
     }
 };

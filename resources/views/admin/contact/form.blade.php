@@ -19,10 +19,16 @@
         <x-form-hor>
             <x-form-label>타입</x-form-label>
             <x-form-item>
-                {!! xInputText()
+                {!! xSelect()
+                    ->table('site_contact_type','title')
+                    ->setWire('model.defer',"forms.type")
+                    ->setWidth("medium")
+                !!}
+
+                {{-- {!! xInputText()
                     ->setWire('model.defer',"forms.type")
                     ->setWidth("standard")
-                !!}
+                !!} --}}
             </x-form-item>
         </x-form-hor>
 

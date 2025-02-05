@@ -32,6 +32,8 @@ return new class extends Migration
 
             $table->string('manager')->nullable();
 
+            $table->integer('like')->default(1);
+
             ## 출력 순서
             $table->integer('pos')->default(1);
         });

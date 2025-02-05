@@ -134,7 +134,7 @@
             <li>Returns acceptance points at Cartzilla pick-up points. Here, our employee will conduct a visual inspection of your goods. The decision regarding the goods is made after the goods are delivered to the service department. The details will be agreed with you. The examination is carried out within 14 days.</li>
           </ul>
           <div class="ratio ratio-4x3 mb-3">
-            <img src="assets/img/help/single.jpg" class="rounded-5" alt="Image">
+            <img src="/assets/img/help/single.jpg" class="rounded-5" alt="Image">
           </div>
           <h3 class="h4 pt-3 pt-sm-4">3. How will I get a refund for the goods?</h3>
           <p>You can provide your bank card details for a refund when making a refund in your personal account on the website or in a paper return form. Please indicate the card number and full name of the bank card holder in English on the return form.</p>

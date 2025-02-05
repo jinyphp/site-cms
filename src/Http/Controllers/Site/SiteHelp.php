@@ -18,7 +18,10 @@ class SiteHelp extends SiteController
         parent::__construct();
         $this->setVisit($this);
 
-        $this->actions['view']['layout'] = "jiny-site-cms::site.help.dashboard.layout";
+        //$this->actions['view']['layout'] = "jiny-site-cms::site.help.layout";
+
+        // 기본값 지정
+        $this->viewFileLayout = "jiny-site-cms::site.help.layout";
 
     }
 

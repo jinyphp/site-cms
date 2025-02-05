@@ -3,7 +3,7 @@
         @foreach ($rows as $item)
         <div class="col-3">
             <div class="card">
-                <img src="/{{$item->image}}" alt="" class="card-img-top">
+                <img src="{{$item->image}}" alt="" class="card-img-top">
 
                 <div class="card-header px-4 pt-4">
                     <x-flex class="gap-2 align-items-start">

@@ -17,7 +17,14 @@ class SiteSlider extends CmsList
 
     public function mount()
     {
-        parent::mount();
+        //parent::mount();
+
+        if($this->code) {
+            $slider = DB::table("cms_sliders")->where('code', $this->code)->first();
+            dd($slider);
+        }
+
+
         $this->getImages($this->code);
     }
 

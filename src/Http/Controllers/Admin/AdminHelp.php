@@ -17,7 +17,7 @@ class AdminHelp extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_help";
+        $this->actions['table']['name'] = "site_help";
 
         $this->actions['view']['layout'] = "jiny-site-cms::admin.help.layout";
 

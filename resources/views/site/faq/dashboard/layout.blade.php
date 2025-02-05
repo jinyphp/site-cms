@@ -2,7 +2,7 @@
     <x-www-layout>
         <x-www-main>
 
-            @livewire('site-help')
+            @livewire('site-faq')
 
         </x-www-main>
     </x-www-layout>

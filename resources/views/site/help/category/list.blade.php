@@ -9,7 +9,7 @@
             <div class="col-md-4 col-lg-3 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
                  {{-- wire:click="dashboard()" --}}
                 <h2 class="h5 border-bottom pb-3 pb-sm-4 mb-0">
-                    <a href="/help">
+                    <a href="/support/help">
                         도움말 주제
                     </a>
                 </h2>
@@ -22,7 +22,7 @@
             <div class="col-md-8 col-lg-9">
                 <div class="d-flex align-items-start border-bottom ps-md-4 pb-3 pb-sm-4">
                     <a class="btn btn-sm btn-outline-secondary border-0 p-0 pe-2"
-                        href="/help"
+                        href="/support/help"
                         aria-label="Back to main topic">
 
                         <i class="ci-chevron-left fs-4"></i>
@@ -45,7 +45,7 @@
                                 @foreach($rows as $item)
                                 <li class="d-flex align-items-center gap-2">
                                     <a class="nav-link hover-effect-underline fw-normal py-2"
-                                            href="/help/{{$code}}/{{$item->id}}">
+                                            href="/support/help/{{$code}}/{{$item->id}}">
                                             {{$item->title}}
                                     </a>
 
@@ -86,7 +86,10 @@
                             <!-- Contact CTA -->
                             <div class="pt-4 pb-1 pb-sm-3 pb-md-4 pb-xl-5 mt-2 mt-sm-3">
                                 <h3 class="fs-sm pb-sm-1">질문에 대한 답변을 찾을 수 없나요?</h3>
-                                <a class="btn btn-lg btn-primary" href="/contact">Contact us</a>
+                                <a class="btn btn-lg btn-primary"
+                                    href="/support/contact">
+                                    Contact us
+                                </a>
                             </div>
                         </div>
                     </div>

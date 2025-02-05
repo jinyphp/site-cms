@@ -17,7 +17,7 @@ class AdminHelpCate extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "site_help_cate";
+        $this->actions['table']['name'] = "site_help_cate";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.help_cate.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.help_cate.form";

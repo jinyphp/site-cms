@@ -1,11 +1,15 @@
 <!-- Customers form -->
-<div class="tab-pane fade show active" id="customers" role="tabpanel" aria-labelledby="customers-tab">
+<div class="tab-pane fade show active"
+    id="customers" role="tabpanel"
+    aria-labelledby="customers-tab">
+
     <div class="needs-validation" novalidate>
         <div class="row g-4">
 
             <div class="col-md-6 position-relative">
-                <label for="fn" class="form-label">First name *</label>
-                <input type="text" class="form-control form-control-lg rounded-pill" wire:model="forms.first_name"
+                <label for="fn" class="form-label">성 *</label>
+                <input type="text" class="form-control form-control-lg rounded-pill"
+                    wire:model="forms.first_name"
                     id="fn" required>
                 <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">
                     Enter your first name!
@@ -14,21 +18,28 @@
 
             <div class="col-md-6 position-relative">
                 <label for="ln" class="form-label">Last name *</label>
-                <input type="text" class="form-control form-control-lg rounded-pill" wire:model="forms.last_name"
+                <input type="text" class="form-control form-control-lg rounded-pill"
+                    wire:model="forms.last_name"
                     id="ln" required>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Enter your last name!</div>
+                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">
+                    Enter your last name!
+                </div>
             </div>
 
             <div class="col-md-6 position-relative">
                 <label for="email" class="form-label">Email *</label>
-                <input type="email" class="form-control form-control-lg rounded-pill" wire:model="forms.email"
+                <input type="email" class="form-control form-control-lg rounded-pill"
+                    wire:model="forms.email"
                     id="email" required>
-                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">Enter your email address!</div>
+                <div class="invalid-tooltip bg-transparent z-0 py-0 ps-3">
+                    Enter your email address!
+                </div>
             </div>
 
             <div class="col-md-6">
                 <label for="phone" class="form-label">Phone number</label>
-                <input type="tel" class="form-control form-control-lg rounded-pill" wire:model="forms.phone"
+                <input type="tel" class="form-control form-control-lg rounded-pill"
+                    wire:model="forms.phone"
                     id="phone"
                     data-input-format='{"numericOnly": true, "delimiters": ["+1 ", " ", " "], "blocks": [0, 3, 3, 2]}'
                     placeholder="+1 ___ ___ __">
@@ -67,7 +78,8 @@
             </div>
 
             <div class="col-12 text-center pt-2 pb-3">
-                <button type="submit" class="btn btn-lg btn-dark rounded-pill" wire:click="submit()">
+                <button type="submit" class="btn btn-lg btn-dark rounded-pill"
+                    wire:click="submit()">
                     전송
                 </button>
             </div>

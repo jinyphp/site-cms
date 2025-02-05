@@ -19,6 +19,8 @@ class JinySiteCMSServiceProvider extends ServiceProvider
         // 데이터베이스
         $this->loadMigrationsFrom(__DIR__.'/../databases/migrations');
 
+        Blade::component($this->package.'::components.'.'contact', 'site-contact');
+
     }
 
     public function register()
@@ -38,8 +40,17 @@ class JinySiteCMSServiceProvider extends ServiceProvider
             Livewire::component('site-notification-user',
                 \Jiny\Site\CMS\Http\Livewire\SiteNotificationUser::class);
 
+            Livewire::component('site-noti-channel-user',
+                \Jiny\Site\CMS\Http\Livewire\SiteNotiChannelUser::class);
+
             Livewire::component('site-help',
                 \Jiny\Site\CMS\Http\Livewire\SiteHelp::class);
+
+            Livewire::component('site-help-search',
+                \Jiny\Site\CMS\Http\Livewire\SiteHelpSearch::class);
+
+            Livewire::component('site-faq',
+                \Jiny\Site\CMS\Http\Livewire\SiteFaq::class);
 
         });
     }

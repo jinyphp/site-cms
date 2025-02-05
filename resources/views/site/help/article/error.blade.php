@@ -21,7 +21,7 @@
             <div class="col-md-8 col-lg-9">
                 <div class="d-flex align-items-start border-bottom ps-md-4 pb-3 pb-sm-4">
                     <a class="btn btn-sm btn-outline-secondary border-0 p-0 pe-2"
-                        href="/help/{{$code}}"
+                        href="/support/help/{{$code}}"
                         aria-label="Back to main topic">
 
                         <i class="ci-chevron-left fs-4"></i>
@@ -51,7 +51,8 @@
                             <!-- Contact CTA -->
                             <div class="pt-4 pb-1 pb-sm-3 pb-md-4 pb-xl-5 mt-2 mt-sm-3">
                                 <h3 class="fs-sm pb-sm-1">질문에 대한 답변을 찾을 수 없나요?</h3>
-                                <a class="btn btn-lg btn-primary" href="/contact">Contact us</a>
+                                <a class="btn btn-lg btn-primary"
+                                    href="/support/contact">Contact us</a>
                             </div>
 
 

@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Str;
 
 use Jiny\WireTable\Http\Controllers\WireTablePopupForms;
-class AdminSlidersController extends WireTablePopupForms
+class AdminSliders extends WireTablePopupForms
 {
     public function __construct()
     {
@@ -17,7 +17,7 @@ class AdminSlidersController extends WireTablePopupForms
         $this->setVisit($this);
 
         ## 테이블 정보
-        $this->actions['table'] = "cms_sliders";
+        $this->actions['table']['name'] = "site_sliders";
 
         $this->actions['view']['list'] = "jiny-site-cms::admin.sliders.list";
         $this->actions['view']['form'] = "jiny-site-cms::admin.sliders.form";
